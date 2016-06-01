@@ -1,0 +1,5 @@
+D:\ProjectEuler\ProblemsArchives\bin\Debug\ProblemsArchives.dll
+D:\ProjectEuler\ProblemsArchives\bin\Debug\ProblemsArchives.pdb
+D:\ProjectEuler\ProblemsArchives\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\ProjectEuler\ProblemsArchives\obj\Debug\ProblemsArchives.dll
+D:\ProjectEuler\ProblemsArchives\obj\Debug\ProblemsArchives.pdb
