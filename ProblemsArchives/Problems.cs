@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProblemsArchives
 {
@@ -56,6 +58,47 @@ namespace ProblemsArchives
 
             // Assert
             Assert.AreEqual(4613732, sum);
+        }
+
+        /// <summary>
+        /// The prime factors of 13195 are 5, 7, 13 and 29.
+        /// What is the largest prime factor of the number 600851475143 ?
+        /// </summary>
+        [TestMethod]
+        public void Largest_Prime_Factor()
+        {
+            // Arrange
+            var factor = default(long);
+            var number = 600851475143;
+            var factorsBoundary = Math.Round(Math.Sqrt(number) / 2);
+
+            // Act
+            for (long i = 2; i < factorsBoundary; i++)
+            {
+                if (number % i == 0)
+                {
+                    // i is a factor
+                    var isPrimeFactor = true;
+                    var boundary = i - 1;
+                    for (long j = 2; j < boundary; j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            // i is not a prime
+                            isPrimeFactor = false;
+                            break;
+                        }
+                    }
+
+                    if (isPrimeFactor)
+                    {
+                        factor = i;
+                    }
+                }
+            }
+
+            // Assert
+            Assert.AreEqual(6857, factor);
         }
     }
 }
