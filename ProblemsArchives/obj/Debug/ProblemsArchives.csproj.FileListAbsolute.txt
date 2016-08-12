@@ -8,4 +8,3 @@ D:\ProjectEuler.Practice\ProblemsArchives\bin\Debug\ProblemsArchives.pdb
 D:\ProjectEuler.Practice\ProblemsArchives\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\ProjectEuler.Practice\ProblemsArchives\obj\Debug\ProblemsArchives.dll
 D:\ProjectEuler.Practice\ProblemsArchives\obj\Debug\ProblemsArchives.pdb
-D:\ProjectEuler.Practice\ProblemsArchives\obj\Debug\ProblemsArchives.csprojResolveAssemblyReference.cache
