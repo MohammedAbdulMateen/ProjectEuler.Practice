@@ -289,5 +289,72 @@
             // Assert
             Assert.AreEqual(23514624000, maxProduct);
         }
+
+        /// <summary>
+        /// A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+        /// a2 + b2 = c2
+        /// For example, 32 + 42 = 9 + 16 = 25 = 52.
+        /// There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+        /// Find the product abc.
+        /// </summary>
+        [TestMethod]
+        public void Special_Pythagorean_Triplet()
+        {
+            // Arrange
+            var product = 0;
+
+            // Act
+            for (var a = 100; a < 500; a++)
+            {
+                for (var b = 100; b < 500; b++)
+                {
+                    for (var c = 100; c < 500; c++)
+                    {
+                        if (Math.Pow(a, 2) + Math.Pow(b, 2) == Math.Pow(c, 2) && a + b + c == 1000 && a < b && b < c)
+                        {
+                            product = a * b * c;
+                        }
+                    }
+                }
+            }
+
+            // Assert
+            Assert.AreEqual(31875000, product);
+        }
+
+        /// <summary>
+        /// The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+        /// Find the sum of all the primes below two million.
+        /// </summary>
+        [TestMethod]
+        public void Summation_Of_Primes()
+        {
+            // Arrange
+            long sum = 0;
+
+            // Act
+            for (long i = 2; i < 2000000; i++)
+            {
+                var isPrime = true;
+
+                var k = Math.Round(Math.Sqrt(i));
+                for (long j = 2; j <= k; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime)
+                {
+                    sum += i;
+                }
+            }
+
+            // Assert
+            Assert.AreEqual(142913828922, sum);
+        }
     }
 }
